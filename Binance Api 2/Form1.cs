@@ -57,17 +57,22 @@ namespace Binance_Api_2
         public static string symbol_name;
         private void button6_Click(object sender, EventArgs e)
         {
-            if (button6.Visible == false)
-            {
-                panel1.Visible = true;
-            }
-            else
-            {
-                panel1.Visible = false;
-            }
+            ButtonVision(button6, panel1);
             symbol_name = (sender as Button).Text.ToString();
             CryptoInfo crypto = new CryptoInfo();
             OpenChildForm(new CryptoInfo());
+        }
+
+        private void ButtonVision(Button button, Panel panel)
+        {
+            if (button.Visible == false)
+            {
+                panel.Visible = true;
+            }
+            else
+            {
+                panel.Visible = false;
+            }
         }
     }
 }
