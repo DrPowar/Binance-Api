@@ -42,11 +42,9 @@ namespace Binance_Api_2
                 catch // обробка виключення у випадку якщо дані від сереверу не отримані
                 {
                     timer1.Enabled = false;
-                    string message = "Дані не отримані!";
-                    string caption = "Помилка сервера";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     DialogResult result;
-                    result = MessageBox.Show(message, caption, buttons);
+                    result = MessageBox.Show("Дані не отримані!", "Помилка сервера", buttons);
                     if (result == System.Windows.Forms.DialogResult.Yes)
                     {
                         this.Close();
